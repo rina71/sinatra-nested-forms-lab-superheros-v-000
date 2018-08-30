@@ -7,9 +7,10 @@ class App < Sinatra::Base
     erb :team
   end
    post'/teams' do
-     @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
-    #  @team.name = params[:team][:name]
-    #  @team.motto = params[:team][:motto]
+     @team = Team.new
+    #  (name: params[:team][:name], motto: params[:team][:motto])
+     @team.name = params[:team][:name]
+     @team.motto = params[:team][:motto]
 
      heros = params[:team][:heros]
      @heros = heros.collect do |hero|
