@@ -10,9 +10,11 @@ class App < Sinatra::Base
      @team = Team.new
      @team.name = params[:team][:name]
      @team.motto = params[:team][:motto]
-  
-     @hero = Hero.new
 
+     heros = params[:team][:heros]
+     heros.each do |hero|
+       @hero = Hero.new(hero)
+     end
      erb :super_hero
    end
 
