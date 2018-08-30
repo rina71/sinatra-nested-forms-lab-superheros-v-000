@@ -19,7 +19,7 @@ class App < Sinatra::Base
        a.power = params[:team][:heros][:power]
        a.bio = params[:team][:heros][:bio]
      end
-     @heros.name = params
+    
      erb :super_hero
    end
 
