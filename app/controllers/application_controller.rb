@@ -17,8 +17,8 @@ class App < Sinatra::Base
     #    a = Hero.new
     #    a.name = params[:team][:heros][:name]
     #    a.power = params[:team][:heros][:power]
-    #    a.bio = params[:team][:heros][:bio]
-     end
+    # #    a.bio = params[:team][:heros][:bio]
+    #  end
 
      erb :super_hero
    end
