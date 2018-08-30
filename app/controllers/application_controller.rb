@@ -14,7 +14,7 @@ class App < Sinatra::Base
 
      heros = params[:team][:heros]
      @heros = heros.collect do |hero|
-       Hero.new(heros)
+       Hero.new(hero)
 
      end
 
